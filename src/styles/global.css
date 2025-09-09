@@ -58,3 +58,32 @@
   max-width: 28rem; /* ~448px */
   margin-inline: auto;
 }
+/* Ultra-compact App Store badge & aligned rows */
+.badge { height: 20px; width: auto; }          /* was 28px -> now tiny */
+.app-row {
+  display: grid;
+  grid-template-columns: 1fr auto;             /* text left, badge right */
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 26rem;                             /* slightly narrower */
+  margin-inline: auto;
+}
+
+/* Logo + title row: keep side-by-side and in view on mobile */
+.brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;                              /* allow wrap instead of overflow */
+  gap: 0.5rem 0.75rem;
+}
+.logo { width: 64px; height: auto; }           /* compact logo */
+.brand-title {
+  line-height: 1.1;
+  /* clamp font so it never pushes off-screen on mobile */
+  font-size: clamp(1.25rem, 6vw, 2.75rem);     /* ~20px → ~44px */
+  margin: 0;
+  white-space: normal;                          /* allow wrapping */
+  text-align: left;
+}
