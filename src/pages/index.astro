@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Holonic Systems — Become Sound™">
+  <main class="splash-bg min-h-[100dvh] flex items-center justify-center">
+    <section class="splash-inner mx-auto max-w-3xl text-center px-6 py-16">
+      <!-- Logo + Title -->
+      <div class="flex items-center justify-center gap-4 mb-6">
+        <img src="/assets/holon-logo-color.png" alt="Holonic logo" class="logo" />
+        <h1 class="font-serif text-white text-4xl md:text-6xl">Holonic Systems</h1>
+      </div>
+
+      <!-- Tagline -->
+      <p class="text-xl md:text-2xl text-white">
+        Become part of the circuit and… <span class="font-semibold">Become Sound™</span>
+      </p>
+
+      <!-- Links + App Store badges inside dark blue box -->
+      <div class="mt-10 bg-holon-darkblue rounded-lg p-6 flex flex-col items-center gap-5 shadow-lg/50">
+        <!-- Centered email link -->
+        <a href="mailto:info@holonic.systems" class="text-holon-yellow hover:text-[#9a877e] underline-offset-2 hover:underline">
+          info@holonic.systems
+        </a>
+
+        <!-- Holon row -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href="https://itunes.apple.com/app/id1352687747" aria-label="Download Holon on the App Store" class="shrink-0">
+            <img src="/assets/appstore-badge.png" class="badge" alt="Download Holon on the App Store" />
+          </a>
+          <a href="https://holon.audio" class="text-holon-yellow hover:text-[#9a877e] hover:underline text-lg">
+            Holon
+          </a>
+        </div>
+
+        <!-- Holon.ist row -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href="https://itunes.apple.com/app/id1359763686" aria-label="Download Holon.ist on the App Store" class="shrink-0">
+            <img src="/assets/appstore-badge.png" class="badge" alt="Download Holon.ist on the App Store" />
+          </a>
+          <a href="https://holon.ist" class="text-holon-yellow hover:text-[#9a877e] hover:underline text-lg">
+            Holon.ist
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer tagline -->
+      <p class="mt-14 text-white/70 text-sm">
+        © 2025 Holonic Systems — 
+        <span class="text-white/80">The Internet of Everything is Musical™</span>
+      </p>
+    </section>
+  </main>
+</BaseLayout>

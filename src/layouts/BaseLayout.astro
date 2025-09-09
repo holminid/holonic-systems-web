@@ -1,0 +1,22 @@
+---
+const { title = "Holonic Systems", description = "Become Sound™" } = Astro.props;
+---
+<!doctype html>
+<html lang="en" class="h-full" style="color-scheme: dark;">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/assets/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body class="min-h-[100dvh] bg-holon-darkblue text-white safe-wrap">
+    <div class="mx-auto max-w-6xl px-4">
+      <slot />
+    </div>
+  </body>
+</html>

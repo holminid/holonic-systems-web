@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Safe areas */
+:root {
+  --inset-top: env(safe-area-inset-top, 0px);
+  --inset-right: env(safe-area-inset-right, 0px);
+  --inset-bottom: env(safe-area-inset-bottom, 0px);
+  --inset-left: env(safe-area-inset-left, 0px);
+}
+.safe-wrap {
+  padding-top: var(--inset-top);
+  padding-right: var(--inset-right);
+  padding-bottom: var(--inset-bottom);
+  padding-left: var(--inset-left);
+}
+
+/* Splash background using geospatial image + dark overlay for readability */
+.splash-bg {
+  background-image: url('/assets/geospatial-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.splash-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(46, 49, 57, 0.85); /* holon-darkblue overlay */
+}
+.splash-inner {
+  position: relative; /* ensure content sits above overlay */
+}
+
+/* Elements */
+.logo {
+  width: clamp(80px, 12vw, 140px);
+  height: auto;
+}
+.badge {
+  height: 44px;
+  width: auto;
+}
