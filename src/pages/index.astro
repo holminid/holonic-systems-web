@@ -15,37 +15,45 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         Become part of the circuit and… <span class="font-semibold">Become Sound™</span>
       </p>
 
-      <!-- Links + App Store badges inside dark blue box -->
-      <div class="mt-10 bg-holon-darkblue rounded-lg p-6 flex flex-col items-center gap-5 shadow-lg/50">
-        <!-- Centered email link -->
-        <a href="mailto:info@holonic.systems" class="text-holon-yellow hover:text-[#9a877e] underline-offset-2 hover:underline">
-          info@holonic.systems
-        </a>
-
-        <!-- Holon row -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a href="https://itunes.apple.com/app/id1352687747" aria-label="Download Holon on the App Store" class="shrink-0">
-            <img src="/assets/appstore-badge.png" class="badge" alt="Download Holon on the App Store" />
-          </a>
-          <a href="https://holon.audio" class="text-holon-yellow hover:text-[#9a877e] hover:underline text-lg">
+      <!-- Aligned app links card -->
+      <div class="mt-10 rounded-xl bg-holon-darkblue/95 border border-white/10 p-6 md:p-7 shadow-lg/50 mx-auto max-w-xl">
+        <!-- Row: Holon (text left, badge right) -->
+        <div class="app-row">
+          <a href="https://holon.audio" class="text-holon-yellow hover:text-[#9a877e] hover:underline text-lg text-left">
             Holon
+          </a>
+          <a href="https://itunes.apple.com/app/id1352687747" aria-label="Download Holon on the App Store" class="justify-self-end">
+            <img src="/assets/appstore-badge.png" class="badge" alt="Download Holon on the App Store" />
           </a>
         </div>
 
-        <!-- Holon.ist row -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a href="https://itunes.apple.com/app/id1359763686" aria-label="Download Holon.ist on the App Store" class="shrink-0">
-            <img src="/assets/appstore-badge.png" class="badge" alt="Download Holon.ist on the App Store" />
-          </a>
-          <a href="https://holon.ist" class="text-holon-yellow hover:text-[#9a877e] hover:underline text-lg">
+        <!-- Divider -->
+        <div class="my-4 h-px bg-white/10"></div>
+
+        <!-- Row: Holon.ist (text left, badge right) -->
+        <div class="app-row">
+          <a href="https://holon.ist" class="text-holon-yellow hover:text-[#9a877e] hover:underline text-lg text-left">
             Holon.ist
+          </a>
+          <a href="https://itunes.apple.com/app/id1359763686" aria-label="Download Holon.ist on the App Store" class="justify-self-end">
+            <img src="/assets/appstore-badge.png" class="badge" alt="Download Holon.ist on the App Store" />
           </a>
         </div>
       </div>
 
+      <!-- Update notice + email (separate from the card) -->
+      <div class="mt-8 space-y-2">
+        <p class="text-white/80">Update in progress… check back soon.</p>
+        <p>
+          <a href="mailto:info@holonic.systems" class="text-holon-yellow hover:text-[#9a877e] hover:underline">
+            info@holonic.systems
+          </a>
+        </p>
+      </div>
+
       <!-- Footer tagline -->
-      <p class="mt-14 text-white/70 text-sm">
-        © 2025 Holonic Systems — 
+      <p class="mt-12 text-white/70 text-sm">
+        © {new Date().getFullYear()} Holonic Systems —
         <span class="text-white/80">The Internet of Everything is Musical™</span>
       </p>
     </section>
