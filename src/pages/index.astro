@@ -4,22 +4,24 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <BaseLayout title="Holonic Systems — Become Sound™">
   <main class="splash-bg min-h-[100dvh] flex items-center justify-center">
     <section class="splash-inner mx-auto max-w-3xl text-center px-6 py-16">
-      <!-- Logo + Title -->
-      <div class="flex items-center justify-center gap-4 mb-6">
+
+      <!-- Logo + Title (side-by-side, mobile-safe) -->
+      <div class="brand-row mb-5">
         <img src="/assets/holon-logo-color.png" alt="Holonic logo" class="logo" />
-        <h1 class="font-serif text-white text-4xl md:text-6xl">Holonic Systems</h1>
+        <h1 class="brand-title text-white font-serif">Holonic Systems</h1>
       </div>
 
       <!-- Tagline -->
-      <p class="text-xl md:text-2xl text-white">
+      <p class="text-white text-base sm:text-lg md:text-xl">
         Become part of the circuit and… <span class="font-semibold">Become Sound™</span>
       </p>
 
       <!-- Aligned app links card -->
-      <div class="mt-10 rounded-xl bg-holon-darkblue/95 border border-white/10 p-6 md:p-7 shadow-lg/50 mx-auto max-w-xl">
-        <!-- Row: Holon (text left, badge right) -->
+      <div class="mt-8 rounded-xl bg-holon-darkblue/95 border border-white/10 p-5 shadow-lg/50 mx-auto max-w-xl">
+
+        <!-- Row: Holon -->
         <div class="app-row">
-          <a href="https://holon.audio" class="text-holon-yellow hover:text-[#9a877e] hover:underline text-lg text-left">
+          <a href="https://holon.audio" class="text-holon-yellow hover:text-[#9a877e] hover:underline text-base sm:text-lg text-left">
             Holon
           </a>
           <a href="https://itunes.apple.com/app/id1352687747" aria-label="Download Holon on the App Store" class="justify-self-end">
@@ -28,11 +30,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
 
         <!-- Divider -->
-        <div class="my-4 h-px bg-white/10"></div>
+        <div class="my-3 h-px bg-white/10"></div>
 
-        <!-- Row: Holon.ist (text left, badge right) -->
+        <!-- Row: Holon.ist -->
         <div class="app-row">
-          <a href="https://holon.ist" class="text-holon-yellow hover:text-[#9a877e] hover:underline text-lg text-left">
+          <a href="https://holon.ist" class="text-holon-yellow hover:text-[#9a877e] hover:underline text-base sm:text-lg text-left">
             Holon.ist
           </a>
           <a href="https://itunes.apple.com/app/id1359763686" aria-label="Download Holon.ist on the App Store" class="justify-self-end">
@@ -41,9 +43,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
       </div>
 
-      <!-- Update notice + email (separate from the card) -->
-      <div class="mt-8 space-y-2">
-        <p class="text-white/80">Update in progress… check back soon.</p>
+      <!-- Update notice + email -->
+      <div class="mt-6 space-y-2">
+        <p class="text-white/80 text-sm sm:text-base">Update in progress… check back soon.</p>
         <p>
           <a href="mailto:info@holonic.systems" class="text-holon-yellow hover:text-[#9a877e] hover:underline">
             info@holonic.systems
@@ -52,7 +54,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </div>
 
       <!-- Footer tagline -->
-      <p class="mt-12 text-white/70 text-sm">
+      <p class="mt-10 text-white/70 text-xs sm:text-sm">
         © {new Date().getFullYear()} Holonic Systems —
         <span class="text-white/80">The Internet of Everything is Musical™</span>
       </p>
