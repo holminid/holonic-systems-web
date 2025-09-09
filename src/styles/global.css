@@ -43,3 +43,18 @@
   height: 44px;
   width: auto;
 }
+/* Compact App Store badge and aligned rows */
+.badge {
+  height: 28px; /* small, minimal */
+  width: auto;
+}
+
+.app-row {
+  display: grid;
+  grid-template-columns: 1fr auto; /* text left, badge right */
+  align-items: center;
+  gap: 0.75rem; /* 12px */
+  width: 100%;
+  max-width: 28rem; /* ~448px */
+  margin-inline: auto;
+}
