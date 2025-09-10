@@ -16,7 +16,7 @@
   padding-left: var(--inset-left);
 }
 
-/* Splash background using geospatial image + dark overlay for readability */
+/* Splash background with overlay */
 .splash-bg {
   background-image: url('/assets/geospatial-bg.png');
   background-size: cover;
@@ -31,59 +31,41 @@
   background: rgba(46, 49, 57, 0.85); /* holon-darkblue overlay */
 }
 .splash-inner {
-  position: relative; /* ensure content sits above overlay */
+  position: relative; /* content above overlay */
 }
 
-/* Elements */
-.logo {
-  width: clamp(80px, 12vw, 140px);
-  height: auto;
-}
-.badge {
-  height: 44px;
-  width: auto;
-}
-/* Compact App Store badge and aligned rows */
-.badge {
-  height: 28px; /* small, minimal */
-  width: auto;
-}
-
-.app-row {
-  display: grid;
-  grid-template-columns: 1fr auto; /* text left, badge right */
-  align-items: center;
-  gap: 0.75rem; /* 12px */
-  width: 100%;
-  max-width: 28rem; /* ~448px */
-  margin-inline: auto;
-}
-/* Ultra-compact App Store badge & aligned rows */
-.badge { height: 20px; width: auto; }          /* was 28px -> now tiny */
-.app-row {
-  display: grid;
-  grid-template-columns: 1fr auto;             /* text left, badge right */
-  align-items: center;
-  gap: 0.5rem;
-  width: 100%;
-  max-width: 26rem;                             /* slightly narrower */
-  margin-inline: auto;
-}
-
-/* Logo + title row: keep side-by-side and in view on mobile */
+/* Brand row */
 .brand-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;                              /* allow wrap instead of overflow */
-  gap: 0.5rem 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
-.logo { width: 64px; height: auto; }           /* compact logo */
+.logo {
+  width: 72px;
+  height: auto;
+}
 .brand-title {
+  font-size: clamp(2rem, 6vw, 3.5rem); /* ~32px mobile → ~56px desktop */
+  font-weight: 700;
+  color: white;
   line-height: 1.1;
-  /* clamp font so it never pushes off-screen on mobile */
-  font-size: clamp(1.25rem, 6vw, 2.75rem);     /* ~20px → ~44px */
   margin: 0;
-  white-space: normal;                          /* allow wrapping */
   text-align: left;
+}
+
+/* App rows */
+.badge {
+  width: 70px;   /* very small */
+  height: auto;
+}
+.app-row {
+  display: grid;
+  grid-template-columns: 1fr auto; /* text left, badge right */
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 22rem;
+  margin-inline: auto;
 }
