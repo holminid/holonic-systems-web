@@ -69,3 +69,7 @@
   max-width: 22rem;
   margin-inline: auto;
 }
+/* On very narrow screens (iPhone 12 mini width), stack title under logo to avoid awkward breaks */
+@media (max-width: 360px) {
+  .brand-row { flex-direction: column; }
+}
