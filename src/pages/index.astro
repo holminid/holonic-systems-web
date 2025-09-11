@@ -5,72 +5,44 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <main class="splash-bg min-h-[100dvh] flex items-center justify-center">
     <section class="splash-inner mx-auto max-w-3xl text-center px-6 py-16">
 
-      <!-- Brand row: logo + title -->
-      <div class="brand-row" style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:14px;margin-bottom:18px;">
-        <!-- Bigger logo on all devices -->
-        <img src="/assets/holon-logo-color.png" alt="Holonic logo"
-             style="width:clamp(110px,18vw,180px);height:auto;display:block;" />
-        <!-- Big, bold title that stays in view and wraps nicely -->
-        <h1 style="margin:0;line-height:1.05;color:#fff;font-weight:800;
-                   font-size:clamp(48px,9vw,84px);text-align:left;max-width:100%;">
-          Holonic&nbsp;Systems
-        </h1>
+      <!-- Brand row -->
+      <div class="brand-row mb-6">
+        <img src="/assets/holon-logo-color.png" alt="Holonic logo" class="logo" />
+        <h1 class="brand-title">Holonic Systems</h1>
       </div>
 
       <!-- Tagline -->
-      <p class="text-white" style="font-size:clamp(16px,2.8vw,22px);margin:0 0 20px;">
-        Become part of the circuit and… <span style="font-weight:600;">Become Sound™</span>
+      <p class="tagline">
+        Become part of the circuit and… <span class="font-semibold">Become Sound™</span>
       </p>
 
-      <!-- App card (aligned, bigger badges) -->
-      <div style="background:#2e3139f2;border:1px solid rgba(255,255,255,.12);
-                  padding:18px 20px;max-width:520px;margin:22px auto 0;
-                  box-shadow:0 8px 24px rgba(0,0,0,.25);border-radius:12px;">
-        <!-- Holon row -->
-        <div style="display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;margin:8px 0;">
-          <a href="https://holon.audio"
-             style="color:#f4f694;text-decoration:none;font-size:18px;text-align:left;">
-            Holon
-          </a>
-          <a href="https://itunes.apple.com/app/id1352687747" aria-label="Download Holon on the App Store" style="justify-self:end;">
-            <!-- 3–4× bigger than before -->
-            <img src="/assets/appstore-badge.png" alt="App Store"
-                 style="width:clamp(140px,20vw,190px);height:auto;display:block;" />
+      <!-- App card -->
+      <div class="app-card">
+        <div class="app-row">
+          <a href="https://holon.audio" class="app-link">Holon</a>
+          <a href="https://itunes.apple.com/app/id1352687747" aria-label="Download Holon on the App Store" class="badge-link">
+            <img src="/assets/appstore-badge.png" class="badge" alt="App Store" />
           </a>
         </div>
-
-        <!-- Divider -->
-        <div style="height:1px;background:rgba(255,255,255,.12);margin:12px 0;"></div>
-
-        <!-- Holon.ist row -->
-        <div style="display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;margin:8px 0;">
-          <a href="https://holon.ist"
-             style="color:#f4f694;text-decoration:none;font-size:18px;text-align:left;">
-            Holon.ist
-          </a>
-          <a href="https://itunes.apple.com/app/id1359763686" aria-label="Download Holon.ist on the App Store" style="justify-self:end;">
-            <img src="/assets/appstore-badge.png" alt="App Store"
-                 style="width:clamp(140px,20vw,190px);height:auto;display:block;" />
+        <div class="divider"></div>
+        <div class="app-row">
+          <a href="https://holon.ist" class="app-link">Holon.ist</a>
+          <a href="https://itunes.apple.com/app/id1359763686" aria-label="Download Holon.ist on the App Store" class="badge-link">
+            <img src="/assets/appstore-badge.png" class="badge" alt="App Store" />
           </a>
         </div>
       </div>
 
-      <!-- Update notice + email -->
-      <div style="margin-top:18px;">
-        <p style="color:rgba(255,255,255,.85);margin:0 0 6px;font-size:14px;">
-          Update in progress… check back soon.
-        </p>
-        <p style="margin:0;">
-          <a href="mailto:info@holonic.systems" style="color:#f4f694;text-decoration:none;font-size:16px;">
-            info@holonic.systems
-          </a>
-        </p>
+      <!-- Update + email -->
+      <div class="update-block">
+        <p class="update-text">Update in progress… check back soon.</p>
+        <p><a href="mailto:info@holonic.systems" class="email-link">info@holonic.systems</a></p>
       </div>
 
       <!-- Footer tagline -->
-      <p style="margin-top:28px;color:rgba(255,255,255,.7);font-size:12px;">
+      <p class="footer-tagline">
         © {new Date().getFullYear()} Holonic Systems —
-        <span style="color:rgba(255,255,255,.85);">The Internet of Everything is Musical™</span>
+        <span class="footer-alt">The Internet of Everything is Musical™</span>
       </p>
     </section>
   </main>
