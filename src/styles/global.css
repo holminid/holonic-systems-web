@@ -136,3 +136,11 @@
     font-size: 36px; /* lock so it won’t spill */
   }
 }
+/* Prevent title text from bleeding off-screen on narrow devices */
+.brand-title {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  max-width: 90vw;   /* keep inside viewport */
+  text-align: center;
+}
