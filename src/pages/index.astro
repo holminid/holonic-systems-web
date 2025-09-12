@@ -6,12 +6,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <section class="splash-inner mx-auto max-w-3xl text-center px-6 py-16">
 
       <!-- Brand row: logo + title -->
-      <div class="brand-row mb-6" style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;">
+      <div class="brand-row" style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:14px;margin-bottom:18px;">
+        <!-- Bigger logo on all devices -->
         <img src="/assets/holon-logo-color.png" alt="Holonic logo"
              style="width:clamp(110px,18vw,180px);height:auto;display:block;" />
-        <h1 class="brand-title" style="margin:0;line-height:1.05;color:#fff;font-weight:800;
-                   font-size:clamp(48px,9vw,84px);text-align:left;">
-          Holonic Systems
+        <!-- Big, bold title that stays in view and wraps nicely -->
+        <h1 style="margin:0;line-height:1.05;color:#fff;font-weight:800;
+                   font-size:clamp(48px,9vw,84px);text-align:left;max-width:100%;">
+          Holonic&nbsp;Systems
         </h1>
       </div>
 
@@ -20,17 +22,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         Become part of the circuit and… <span style="font-weight:600;">Become Sound™</span>
       </p>
 
-      <!-- App card -->
+      <!-- App card (aligned, bigger badges) -->
       <div style="background:#2e3139f2;border:1px solid rgba(255,255,255,.12);
                   padding:18px 20px;max-width:520px;margin:22px auto 0;
                   box-shadow:0 8px 24px rgba(0,0,0,.25);border-radius:12px;">
-        <!-- Holon -->
+        <!-- Holon row -->
         <div style="display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;margin:8px 0;">
           <a href="https://holon.audio"
              style="color:#f4f694;text-decoration:none;font-size:18px;text-align:left;">
             Holon
           </a>
           <a href="https://itunes.apple.com/app/id1352687747" aria-label="Download Holon on the App Store" style="justify-self:end;">
+            <!-- 3–4× bigger than before -->
             <img src="/assets/appstore-badge.png" alt="App Store"
                  style="width:clamp(140px,20vw,190px);height:auto;display:block;" />
           </a>
@@ -39,7 +42,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <!-- Divider -->
         <div style="height:1px;background:rgba(255,255,255,.12);margin:12px 0;"></div>
 
-        <!-- Holon.ist -->
+        <!-- Holon.ist row -->
         <div style="display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;margin:8px 0;">
           <a href="https://holon.ist"
              style="color:#f4f694;text-decoration:none;font-size:18px;text-align:left;">
