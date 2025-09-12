@@ -144,3 +144,16 @@
   max-width: 90vw;   /* keep inside viewport */
   text-align: center;
 }
+/* 1) Keep the title inside the viewport on narrow phones */
+.brand-title {
+  overflow-wrap: anywhere;   /* allows smart wrapping */
+  word-break: normal;
+  hyphens: auto;
+  max-width: 90vw;           /* never exceed the screen */
+}
+
+/* 2) On very small screens, stack logo over title + center the title */
+@media (max-width: 380px) {
+  .brand-row { flex-direction: column; }
+  .brand-title { text-align: center; }
+}
